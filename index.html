@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MACT</title>
+    <!-- Include Model Viewer Script -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        model-viewer {
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Musée d'Art Contemporain Tunisien</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#exhibits">Exhibits</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="viewer">
+            <h2>Explore the 360° Exhibit</h2>
+            <!-- Model Viewer for 360° Exhibit -->
+            <model-viewer 
+                src="https://drive.google.com/uc?export=download&id=1SqUlkBQqdyxNIe24TwoI6vaJr3N6Cv6c" 
+                alt="360° Exhibit"
+                camera-controls
+                auto-rotate
+                environment-image="neutral"
+                shadow-intensity="1"
+                min-camera-orbit="auto auto 1m"
+                max-camera-orbit="auto auto 5m"
+                interaction-prompt="auto">
+            </model-viewer>
+        </section>
+        <section id="about">
+            <h2>About the Museum</h2>
+            <p>Discover the art and history behind our museum.</p>
+        </section>
+        <section id="exhibits">
+            <h2>Current Exhibits</h2>
+            <p>Explore our curated collection of masterpieces.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@museum.com | Phone: +123-456-7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Museum Website</p>
+    </footer>
+</body>
+</html>
